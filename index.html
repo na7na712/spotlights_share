@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欲しいスポットライトトレジャー(11/8~12/6)はコレだ!!</title>
+    <style>
+        /* チェックボックスを中央寄せにするスタイル */
+        input[type="checkbox"] {
+            display: block; /* チェックボックスをブロック要素に変更 */
+            margin: 0 auto; /* 左右のマージンを自動で調整して中央寄せにする */
+        }
+    </style>
+</head>
+<body>
+    <h1>スポットライトトレジャー(11/8~12/6)</h1>
+    <p><b>欲しいカードを皆にシェアしよう</b></p>
+    <p><b>欲しいカードをチェックして送信をクリック</b></p>
+    
+
+    <form>
+    <h2>11/8~11/15</h2>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="card1" name="card" value="card1"></td>
+                <td><input type="checkbox" id="card2" name="card" value="card2"></td>
+                <td><input type="checkbox" id="card3" name="card" value="card3"></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/alioth.webp" alt="alioth" width="150"></td>
+                <td><img src="cardimage/knull.webp" alt="knull" width="150"></td>
+                <td><img src="cardimage/negasonic-teenage-warhead.webp" alt="negasonic-teenage-warhead" width="150"></td>
+            </tr>
+        </table>
+
+    <h2>11/15~11/22</h2>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="card4" name="card" value="card4"></td>
+                <td><input type="checkbox" id="card5" name="card" value="card5"></td>
+                <td><input type="checkbox" id="card6" name="card" value="card6"></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/gladiator.webp" alt="gladiator" width="150"></td>
+                <td><img src="cardimage/mirage.webp" alt="mirage" width="150"></td>
+                <td><img src="cardimage/loki.webp" alt="loki" width="150"></td>
+            </tr>
+        </table>
+
+    <h2>11/22~11/29</h2>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="card7" name="card" value="card7"></td>
+                <td><input type="checkbox" id="card8" name="card" value="card8"></td>
+                <td><input type="checkbox" id="card9" name="card" value="card9"></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/annihilus.webp" alt="annihilus" width="150"></td>
+                <td><img src="cardimage/daken.webp" alt="daken" width="150"></td>
+                <td><img src="cardimage/x-23.webp" alt="x-23" width="150"></td>
+            </tr>
+        </table>    
+
+    <h2>11/29~12/6</h2>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="card10" name="card" value="card10"></td>
+                <td><input type="checkbox" id="card11" name="card" value="card11"></td>
+                <td><input type="checkbox" id="card12" name="card" value="card12"></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/martyr.webp" alt="martyr" width="150"></td>
+                <td><img src="cardimage/jean-grey.webp" alt="jean-grey" width="150"></td>
+                <td><img src="cardimage/spider-man-2099.webp" alt="spider-man-2099" width="150"></td>
+            </tr>
+        </table>    
+
+        <button type="button" id="check">送信</button>
+    </form>
+
+    <script>
+
+        // ボタンをクリックしたときに別のページに移動
+        document.getElementById("check").addEventListener("click", function () {
+            const isChecked1 = card1.checked;
+            const isChecked2 = card2.checked;
+            const isChecked3 = card3.checked;
+            const isChecked4 = card4.checked;
+            const isChecked5 = card5.checked;
+            const isChecked6 = card6.checked;
+            const isChecked7 = card7.checked;
+            const isChecked8 = card8.checked;
+            const isChecked9 = card9.checked;
+            const isChecked10 = card10.checked;
+            const isChecked11 = card11.checked;
+            const isChecked12 = card12.checked;
+            
+
+            // クエリパラメータを含む URL を生成
+            const url = "next.html" +
+                "?isChecked1=" + isChecked1 +
+                "&isChecked2=" + isChecked2 +
+                "&isChecked3=" + isChecked3 +
+                "&isChecked4=" + isChecked4 +
+                "&isChecked5=" + isChecked5 +
+                "&isChecked6=" + isChecked6 +
+                "&isChecked7=" + isChecked7 +
+                "&isChecked8=" + isChecked8 +
+                "&isChecked9=" + isChecked9 +
+                "&isChecked10=" + isChecked10 +
+                "&isChecked11=" + isChecked11 +
+                "&isChecked12=" + isChecked12;
+
+            // 別のページにリダイレクト
+            window.location.href = url;
+        });
+
+    </script>
+
+</body>
+</html>

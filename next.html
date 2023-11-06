@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欲しいスポットライトトレジャー(11/8~12/6)はコレだ!!</title>
+    <style>
+        /* テキストを中央寄せにするスタイル */
+        p[id^="status"] {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><h1 id="title">スポットライトトレジャー(11/8~12/6)</h1></a>
+    <p><b>欲しいカードを皆にシェアしよう</b></p>
+
+    
+    <form>
+    <h2>11/8~11/15</h2>
+        <table>
+            <tr>
+                <td><p id="status1"><span id="isChecked1Text"></span></p></td>
+                <td><p id="status2"><span id="isChecked2Text"></span></p></td>
+                <td><p id="status3"><span id="isChecked3Text"></span></p></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/alioth.webp" alt="alioth" width="150"></td>
+                <td><img src="cardimage/knull.webp" alt="knull" width="150"></td>
+                <td><img src="cardimage/negasonic-teenage-warhead.webp" alt="negasonic-teenage-warhead" width="150"></td>
+            </tr>
+        </table>
+
+    <h2>11/15~11/22</h2>
+        <table>
+            <tr>
+                <td><p id="status4"><span id="isChecked4Text"></span></p></td>
+                <td><p id="status5"><span id="isChecked5Text"></span></p></td>
+                <td><p id="status6"><span id="isChecked6Text"></span></p></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/gladiator.webp" alt="gladiator" width="150"></td>
+                <td><img src="cardimage/mirage.webp" alt="mirage" width="150"></td>
+                <td><img src="cardimage/loki.webp" alt="loki" width="150"></td>
+            </tr>
+        </table>    
+
+    <h2>11/22~11/29</h2>
+        <table>
+            <tr>
+                <td><p id="status7"><span id="isChecked7Text"></span></p></td>
+                <td><p id="status8"><span id="isChecked8Text"></span></p></td>
+                <td><p id="status9"><span id="isChecked9Text"></span></p></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/annihilus.webp" alt="annihilus" width="150"></td>
+                <td><img src="cardimage/daken.webp" alt="daken" width="150"></td>
+                <td><img src="cardimage/x-23.webp" alt="x-23" width="150"></td>
+            </tr>
+        </table>    
+
+    <h2>11/29~12/6</h2>
+        <table>
+            <tr>
+                <td><p id="status10"><span id="isChecked10Text"></span></p></td>
+                <td><p id="status11"><span id="isChecked11Text"></span></p></td>
+                <td><p id="status12"><span id="isChecked12Text"></span></p></td>    
+            </tr>
+            <tr>
+                <td><img src="cardimage/martyr.webp" alt="martyr" width="150"></td>
+                <td><img src="cardimage/jean-grey.webp" alt="jean-grey" width="150"></td>
+                <td><img src="cardimage/spider-man-2099.webp" alt="spider-man-2099" width="150"></td>
+            </tr>
+        </table>
+
+        <button type="button" id="share-button">シェア</button>
+
+        <button type="button">
+            <a href="index.html">TOP</a>
+        </button>
+
+
+    </form>
+
+    <script>
+        // クエリパラメータからチェックボックスの状態を読み取る
+        const urlParams = new URLSearchParams(window.location.search);
+        const isChecked1 = urlParams.get("isChecked1");
+        const isChecked2 = urlParams.get("isChecked2");
+        const isChecked3 = urlParams.get("isChecked3");
+        const isChecked4 = urlParams.get("isChecked4");
+        const isChecked5 = urlParams.get("isChecked5");
+        const isChecked6 = urlParams.get("isChecked6");
+        const isChecked7 = urlParams.get("isChecked7");
+        const isChecked8 = urlParams.get("isChecked8");
+        const isChecked9 = urlParams.get("isChecked9");
+        const isChecked10 = urlParams.get("isChecked10");
+        const isChecked11 = urlParams.get("isChecked11");
+        const isChecked12 = urlParams.get("isChecked12");
+        
+        // テキスト要素と条件に基づいてスタイルを変更
+        function updateTextStyle(isChecked, textElement) {
+        if (isChecked === "true") {
+            textElement.innerHTML = "<span style='font-weight: bold; color: red;'>欲しい</span>";
+        } else {
+            textElement.textContent = "いらない";
+        }
+        }
+
+        // テキスト要素を取得
+        const isChecked1Text = document.getElementById("isChecked1Text");
+        const isChecked2Text = document.getElementById("isChecked2Text");
+        const isChecked3Text = document.getElementById("isChecked3Text");
+        const isChecked4Text = document.getElementById("isChecked4Text");
+        const isChecked5Text = document.getElementById("isChecked5Text");
+        const isChecked6Text = document.getElementById("isChecked6Text");
+        const isChecked7Text = document.getElementById("isChecked7Text");
+        const isChecked8Text = document.getElementById("isChecked8Text");
+        const isChecked9Text = document.getElementById("isChecked9Text");
+        const isChecked10Text = document.getElementById("isChecked10Text");
+        const isChecked11Text = document.getElementById("isChecked11Text");
+        const isChecked12Text = document.getElementById("isChecked12Text");
+
+        // テキストスタイルを更新
+        updateTextStyle(isChecked1, isChecked1Text);
+        updateTextStyle(isChecked2, isChecked2Text);
+        updateTextStyle(isChecked3, isChecked3Text);
+        updateTextStyle(isChecked4, isChecked4Text);
+        updateTextStyle(isChecked5, isChecked5Text);
+        updateTextStyle(isChecked6, isChecked6Text);
+        updateTextStyle(isChecked7, isChecked7Text);
+        updateTextStyle(isChecked8, isChecked8Text);
+        updateTextStyle(isChecked9, isChecked9Text);
+        updateTextStyle(isChecked10, isChecked10Text);
+        updateTextStyle(isChecked11, isChecked11Text);
+        updateTextStyle(isChecked12, isChecked12Text);
+        
+
+        
+        // コード2: URLをBitlyを使用して短縮
+        const bitlyAccessToken = '0befc28d8e2e810e26148835e0776880be38f9d1';
+        const longURL = window.location.href;  // 現在のページのURLを使用
+
+        fetch('https://api-ssl.bitly.com/v4/shorten', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${bitlyAccessToken}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                long_url: longURL,
+            }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                const shortURL = data.link;
+
+                // コード1: TwitterでURLをシェア
+                const shareButton = document.getElementById("share-button");
+                shareButton.addEventListener("click", () => {
+                    // 現在のページのURLとタイトルを取得
+                    const pageTitle = document.title;
+
+                    // Bitlyで短縮したURLをTwitterでシェア
+                    const twitterIntentUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shortURL)}&text=${encodeURIComponent(pageTitle)}`;
+                    
+                    // ツイート用のポップアップウィンドウを開く
+                    window.open(twitterIntentUrl, "_blank", "width=600,height=400");
+
+                    // ポップアップブロックを回避するためにユーザーアクション後にウィンドウを開く必要があります
+                });
+
+            })
+            .catch(error => {
+                console.error('Error: ' + error);
+            });
+
+        
+
+
+    </script>
+
+</body>
+</html>
